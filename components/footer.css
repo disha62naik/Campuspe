@@ -1,0 +1,105 @@
+.ft { padding: 35px 0 0; background: linear-gradient(180deg, #fbfbfd 0%, #ffffff 55%); overflow: hidden; }
+.ft__glow {
+  background:
+    radial-gradient(420px 220px at 0% 12%, rgba(255, 232, 214, .55), transparent 70%),
+    radial-gradient(620px 260px at 12% 100%, rgba(59, 130, 246, .55), transparent 70%),
+    radial-gradient(620px 260px at 92% 100%, rgba(99, 120, 240, .5), transparent 70%),
+    radial-gradient(500px 200px at 52% 100%, rgba(147, 197, 253, .45), transparent 70%);
+}
+
+/* ---------- CTA band ---------- */
+.ft-cta {
+  display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
+  min-height: 169px; padding: 32px 48px; background: rgba(255, 255, 255, .8);
+  border: 1px solid #d6dbe6; border-radius: 32px;
+}
+.ft-cta h2 { font-family: var(--f-roboto); font-size: 30px; line-height: 38px; font-weight: 700; color: #0b1226; }
+.ft-cta p { margin-top: 11px; max-width: 360px; font-size: 16px; line-height: 20px; color: var(--muted); }
+.ft-cta__btns { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* all buttons are WHITE by default, BLUE on hover */
+.ft-cta__btn {
+  display: inline-flex; align-items: center; gap: 6px; height: 41px; padding: 0 17px; border-radius: 10px;
+  background: #fff; border: 1px solid #d5dbe6; color: var(--ink-2); font-size: 14px; font-weight: 500; white-space: nowrap;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.ft-cta__btn:hover,
+.ft-cta__btn:focus-visible {
+  background: #0a8bff; border-color: #0a8bff; color: #fff;
+  transform: translateY(-1px); box-shadow: 0 6px 16px rgba(10, 139, 255, .28);
+}
+
+/* ---------- columns: brand | students | colleges | employers | company | legal ---------- */
+
+.ft__cols {
+  margin-top: 52px; display: grid; align-items: start;
+  grid-template-columns:
+    minmax(0, 366fr) minmax(0, 165fr) minmax(0, 157fr) minmax(0, 174fr) minmax(0, 174fr) minmax(0, 208fr);
+}
+
+.ft__brand a { display: inline-flex; }
+.ft__brand p { margin-top: 29px; max-width: 340px; font-size: 20px; line-height: 28px; color: #475569; }
+.ft__brand p + p { margin-top: 20px; }
+
+.ft__col h3 { font-size: 20px; line-height: 28px; font-weight: 500; color: #1f2937; white-space: nowrap; }
+.ft__col ul { display: grid; }
+.ft__col a { display: inline-block; line-height: 21px; color: #6b7280; white-space: nowrap; transition: color .2s; }
+.ft__col a:hover { color: var(--blue); }
+
+/* per-column sizes copied from the Figma */
+.ft__col--students ul  { margin-top: 14px; gap: 14px; }
+.ft__col--students a   { font-size: 14.5px; }
+.ft__col--colleges ul  { margin-top: 10px; gap: 9px; }
+.ft__col--colleges a   { font-size: 13.5px; }
+.ft__col--employers ul { margin-top: 10px; gap: 10px; }
+.ft__col--employers a  { font-size: 14px; }
+.ft__col--company ul   { margin-top: 10px; gap: 10px; }
+.ft__col--company a    { font-size: 14px; }
+.ft__col--legal ul     { margin-top: 10px; gap: 9px; }
+.ft__col--legal a      { font-size: 14px; }
+
+.ft__col .ft__all { margin-top: 11px; font-size: 14px; font-weight: 500; color: #0a8bff; }
+.ft__col .ft__all:hover { color: #0077e6; }
+.ft__note {
+  width: 212px; margin: 28px 0 0 -10px; padding: 16px 15px; border: 1px solid #bfe0ff; border-radius: 12px;
+  background: rgba(235, 246, 255, .85); font-size: 14px; line-height: 22px; color: #4b5563;
+
+}
+
+/* ---------- contact + bottom ---------- */
+.ft__contact { margin-top: 25px; padding: 25px 0 50px; border-top: 1px solid #8f98a8; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+.ft__contact a { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; color: #374151; }
+.ft__contact a span { display: grid; place-items: center; width: 24px; height: 24px; border: 1.5px solid #374151; border-radius: 6px; background: #fff; color: #0a8bff; }
+.ft__contact p { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; color: #374151; }
+.ft__contact p i { width: 7px; height: 7px; border-radius: 50%; background: #10b981; }
+
+.ft__bottom { padding: 26px 0 34px; border-top: 1px solid #8f98a8; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.ft__bottom p { font-size: 18px; line-height: 25px; color: #0b2a6f; }
+.ft__bottom p a { margin-left: 2px; }
+.ft__bottom p a:hover { text-decoration: underline; }
+.ft__social { display: flex; align-items: center; gap: 19px; }
+.ft__social a { display: grid; place-items: center; color: #0b2a6f; transition: transform .2s, color .2s; }
+.ft__social a:hover { transform: translateY(-2px); color: #0a8bff; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1200px) {
+  .ft__cols { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 28px; }
+  .ft__brand { grid-column: 1 / -1; }
+  .ft__col a, .ft__col h3 { white-space: normal; }
+  .ft__col--students a, .ft__col--colleges a, .ft__col--employers a,
+  .ft__col--company a, .ft__col--legal a { font-size: 14.5px; }
+  .ft__col ul { margin-top: 12px; gap: 10px; }
+}
+@media (max-width: 700px) {
+  .ft-cta { padding: 26px 20px; border-radius: 24px; }
+  .ft-cta__btns { width: 100%; }
+  .ft-cta__btn { flex: 1 1 calc(50% - 12px); justify-content: center; }
+  .ft__cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ft__col--legal { grid-column: 1 / -1; }
+
+  .ft__brand p { font-size: 17px; line-height: 24px; }
+  .ft__contact { padding-bottom: 30px; }
+  .ft__contact p { margin-left: 0; }
+  .ft__bottom p { font-size: 15px; }
+  .ft__social { gap: 22px; }
+}

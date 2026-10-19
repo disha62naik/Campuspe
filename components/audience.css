@@ -1,0 +1,59 @@
+.aud { padding: 56px 0 64px; }
+.aud__glow { background: radial-gradient(640px 480px at 100% 70%, rgba(224, 214, 255, .45), transparent 70%), radial-gradient(520px 420px at 0% 20%, rgba(219, 234, 254, .5), transparent 70%); }
+.aud__grid { display: grid; grid-template-columns: minmax(0, 460px) minmax(0, 1fr); gap: 48px; align-items: center; }
+.aud__lead { margin-top: 28px; max-width: 450px; font-size: 18px; line-height: 28px; color: var(--muted); }
+.aud__title { margin-top: 26px; }
+.aud__cta { margin-top: 36px; padding: 0 28px; }
+
+.aud-list { display: grid; gap: 22px; }
+.aud-card {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 24px;
+  padding: 24px 28px; background: #fff; border: 1px solid #eef1f7; border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, .05);
+}
+.aud-card__main { min-width: 0; flex: 1; }
+.aud-card__kicker { display: flex; align-items: center; gap: 10px; }
+.aud-card__n { padding: 3px 8px; border-radius: 6px; background: #eef0ff; color: #4f46e5; font-size: 12px; font-weight: 600; }
+.aud-card__label { font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted-2); }
+.aud-card h3 { margin-top: 10px; font-family: var(--f-jakarta); font-size: 22px; line-height: 28px; font-weight: 600; color: var(--ink); }
+.aud-card p { margin-top: 8px; max-width: 430px; font-size: 15px; line-height: 22px; color: var(--muted); }
+.aud-card__tags { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+.aud-card__note { font-size: 11px; color: var(--muted-2); }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; border: 1px solid transparent;
+  border-radius: 7px; font-size: 12px; font-weight: 500; white-space: nowrap;
+}
+.pill--green { background: #f4fde8; border-color: #84cc16; color: #4d7c0f; }
+.pill--cyan { background: #ecfeff; border-color: #38bdf8; color: #0369a1; height: 22px; font-size: 11px; padding: 0 10px; }
+.pill--indigo { background: #eef2ff; border-color: #d3dafc; color: #4338ca; }
+.pill--grey { background: #f1f5f9; border-color: #e2e8f0; color: #334155; }
+.pill--purple { background: #f5f0ff; border-color: #e0d4fc; color: #7c3aed; }
+.pill--red { background: #fff1f2; border-color: #fecdd3; color: #e11d48; }
+.pill--solid { background: #0a8bff; color: #fff; font-weight: 600; }
+.pill--mint { background: #e7f9ef; border-color: #a7f0c8; color: #059669; }
+.pill i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.pill--grey i { background: #10b981; }
+
+/* employer variant */
+.aud-card--emp { align-items: center; padding: 26px 30px; min-height: 130px; }
+.aud-card--emp .aud-card__lead-row { display: flex; align-items: flex-start; gap: 18px; }
+.aud-card__num { display: grid; place-items: center; width: 39px; height: 39px; border-radius: 10px; background: #eef0ff; color: #4f46e5; font-size: 13px; font-weight: 600; flex-shrink: 0; }
+.aud-card__titlerow { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.aud-card--emp h3 { margin-top: 0; font-size: 21px; }
+.aud-card--emp p { margin-top: 8px; max-width: 360px; font-size: 14.5px; }
+.aud-card__setup { padding: 2px 9px; border-radius: 6px; background: #eef0ff; color: #4f46e5; font-size: 10px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+
+@media (max-width: 1100px) {
+  .aud__grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .aud__lead { max-width: none; }
+}
+@media (max-width: 640px) {
+  .aud { padding: 36px 0 44px; }
+  .aud__lead { font-size: 16px; line-height: 25px; }
+  .aud-list { gap: 14px; }
+  .aud-card, .aud-card--emp { flex-direction: column; gap: 14px; padding: 20px; }
+  .aud-card__tags { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .aud-card h3 { font-size: 19px; }
+  .aud-card p { max-width: none; }
+}

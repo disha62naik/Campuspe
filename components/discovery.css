@@ -1,0 +1,102 @@
+.disc { padding: 60px 0 80px; }
+.disc__glow { background: radial-gradient(700px 500px at 0% 40%, rgba(219, 234, 254, .7), transparent 70%), radial-gradient(600px 400px at 100% 10%, rgba(233, 225, 255, .6), transparent 70%); }
+.disc__grid { display: grid; grid-template-columns: minmax(0, 566px) minmax(0, 628px); justify-content: space-between; align-items: start; gap: 48px; }
+
+.disc__title { margin-top: 26px; }
+.disc__lead { margin-top: 24px; max-width: 480px; font-size: 18px; line-height: 28px; color: var(--muted); }
+
+.disc-steps { margin-top: 28px; display: grid; gap: 12px; }
+.disc-step {
+  display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; column-gap: 16px; align-items: start;
+  padding: 16px 22px; background: #fff; border: 1px solid var(--line); border-radius: 14px;
+}
+.disc-step.is-active { border-color: #cfdcf7; box-shadow: 0 8px 24px rgba(79, 70, 229, .10); }
+.disc-step__n {
+  display: grid; place-items: center; width: 32px; height: 32px; border-radius: 8px;
+  background: #eef0ff; color: #4f46e5; font-size: 12px; font-weight: 600;
+}
+.disc-step__body h3 { font-family: var(--f-jakarta); font-size: 17px; line-height: 24px; font-weight: 600; color: var(--ink); }
+.disc-step__body p { margin-top: 4px; max-width: 340px; font-size: 14px; line-height: 20px; color: var(--muted); }
+.disc-step .tag { margin-top: 2px; }
+
+.tag {
+  display: inline-flex; align-items: center; height: 22px; padding: 0 10px; border-radius: 999px;
+  font-size: 11.5px; font-weight: 500; white-space: nowrap;
+}
+.tag--indigo { background: #eef0ff; color: #4f46e5; }
+.tag--grey { background: #eef1f6; color: #64748b; }
+.tag--green { background: #e3f8ec; color: #15803d; }
+.tag--purple { background: #ede9fe; color: #7c3aed; }
+.tag--blue { background: #e0f0ff; color: #0284c7; }
+
+.disc__cta { margin-top: 28px; padding: 0 28px; }
+.br-lg { display: inline; }
+
+/* ---- feed ---- */
+.feed {
+  padding: 26px 28px 24px; background: #fff; border: 1px solid #eef2f8; border-radius: 26px;
+  box-shadow: 0 24px 64px rgba(30, 64, 175, .12);
+}
+.feed__head { display: flex; align-items: center; gap: 14px; padding-bottom: 22px; border-bottom: 1px solid #edf0f6; }
+.feed__bolt { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: #0a8bff; color: #fff; }
+.feed__heading { flex: 1; min-width: 0; }
+.feed__heading h3 { font-family: var(--f-jakarta); font-size: 19px; line-height: 24px; font-weight: 600; color: var(--ink); }
+.feed__heading p { margin-top: 3px; font-size: 13.5px; color: var(--muted); }
+.feed__live {
+  display: inline-flex; align-items: center; gap: 7px; height: 30px; padding: 0 14px; border-radius: 999px;
+  background: #e0f7ec; color: #047857; font-size: 12.5px; font-weight: 500; white-space: nowrap;
+}
+.feed__live i { width: 6px; height: 6px; border-radius: 50%; background: #10b981; }
+
+.feed__chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.chip { height: 32px; padding: 0 16px; border-radius: 999px; background: #eef3fb; color: #475569; font-size: 14px; font-weight: 500; transition: background-color .2s, color .2s; }
+.chip:hover { background: #e2ebf8; }
+.chip.is-active { background: #0a8bff; color: #fff; }
+
+.feed__list { margin-top: 18px; display: grid; gap: 14px; align-content: start; min-height: 358px; }
+.feed-item {
+  display: grid; grid-template-columns: 46px minmax(0, 1fr) auto; column-gap: 14px; align-items: start;
+  padding: 16px; border: 1px solid #e6ecf4; border-radius: 14px; background: #fff; min-height: 106px;
+}
+.feed-item__logo { width: 46px; height: 46px; border-radius: 12px; padding: 2px; font-size: 9px; }
+.feed-item__logo--text { display: grid; place-items: center; background: #eef2ff; color: #4f46e5; font-weight: 700; font-size: 18px; border: 1px solid #dfe5f6; }
+.feed-item__row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.feed-item__row h4 { font-family: var(--f-jakarta); font-size: 16.5px; line-height: 22px; font-weight: 600; color: var(--ink); }
+.feed-item__row .tag { height: 20px; font-size: 11px; padding: 0 9px; }
+.feed-item__meta { margin-top: 6px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; font-size: 13px; color: var(--muted); }
+.feed-item__meta span { display: inline-flex; align-items: center; gap: 5px; }
+.feed-item__meta .is-strong { color: #334155; font-weight: 600; }
+.feed-item__desc { margin-top: 8px; font-size: 13.5px; color: var(--muted-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.feed-item__main { min-width: 0; }
+.feed-item__btn {
+  display: inline-flex; align-items: center; height: 28px; padding: 0 14px; border-radius: 8px;
+  background: #0a8bff; color: #fff; font-size: 12.5px; font-weight: 600; white-space: nowrap;
+  transition: background-color .2s;
+}
+.feed-item__btn:hover { background: #0077e6; }
+
+.feed__foot { margin-top: 20px; padding-top: 16px; border-top: 1px solid #edf0f6; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--muted-2); }
+.feed__foot a { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500; color: #0a8bff; }
+
+.disc__note { margin: 24px 0 0 70px; display: flex; align-items: flex-start; gap: 10px; font-family: var(--f-hand); font-size: 23px; line-height: 30px; font-weight: 600; color: #5b3fc4; }
+.disc__note svg { margin-top: 2px; }
+
+@media (max-width: 1100px) {
+  .disc__grid { grid-template-columns: minmax(0, 1fr); gap: 56px; }
+  .disc__lead, .disc-step__body p { max-width: none; }
+  .br-lg { display: none; }
+}
+@media (max-width: 600px) {
+  .disc { padding: 36px 0 56px; }
+  .disc__lead { font-size: 16px; line-height: 25px; }
+  .disc-step { grid-template-columns: 32px minmax(0, 1fr); }
+  .disc-step .tag { grid-column: 2; justify-self: start; margin-top: 10px; }
+  .feed { padding: 18px 16px; border-radius: 20px; }
+  .feed__head { flex-wrap: wrap; }
+  .feed__live { order: 3; }
+  .feed-item { grid-template-columns: 40px minmax(0, 1fr); }
+  .feed-item__logo { width: 40px; height: 40px; }
+  .feed-item__btn { grid-column: 2; justify-self: start; margin-top: 12px; }
+  .feed__list { min-height: 0; }
+  .disc__note { margin-left: 8px; font-size: 20px; }
+}
